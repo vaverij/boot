@@ -1,0 +1,226 @@
+#body{
+    font-family: 'Hind', sans-serif;
+    background-color: #1C2325;
+    color: #eee;
+  }
+.header{
+    text-align: center;
+    margin: 0;
+    z-index: 2;
+}
+.promo-block {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: url(../img/1920x1080/05.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50% 0 200px;
+  }
+  
+  .promo-block:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(81, 87, 105, 0.4);
+    content: " ";
+  }
+  
+  .promo-block .promo-block-title {
+    font-size: 70px;
+    color: #fff;
+  }
+
+  @media (max-width: 720px) {
+    .promo-block {
+        padding: 100px 0 200px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .promo-block .promo-block-title {
+      font-size: 50px;
+    }
+  }
+  
+  .promo-block .promo-block-text {
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .btn-theme {
+    position: relative;
+    display: inline-block;
+    line-height: 1.4;
+    text-align: center;
+    background-image: none;
+    border-style: solid;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+.btn-theme:focus, .btn-theme:active:focus, .btn-theme.active:focus, .btn-theme.focus, .btn-theme:active.focus, .btn-theme.active.focus {
+    outline: none;
+  }
+  
+  .btn-theme:hover {
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  }
+  
+  .btn-theme:hover, .btn-theme:focus, .btn-theme.focus {
+    text-decoration: none;
+  }
+  
+  .btn-theme:active, .btn-theme.active {
+    background-image: none;
+    outline: 0;
+  }
+  
+  .btn-theme.disabled, .btn-theme[disabled],
+  fieldset[disabled] .btn-theme {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .65;
+    pointer-events: none;
+  }
+  
+  .btn-white-bg {
+    color: #515769;
+    background: #fff;
+    border-color: transparent;
+    border-width: 0;
+  }
+  
+  .btn-white-bg:hover, .btn-white-bg:focus, .btn-white-bg.focus {
+    color: #fff;
+    background: #17bed2;
+    border-color: transparent;
+  }
+  
+  .btn-white-brd {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+    border-width: 2px;
+  }
+  
+  .btn-white-brd:hover, .btn-white-brd:focus, .btn-white-brd.focus {
+    color: #515769;
+    background: #fff;
+    border-color: #fff;
+  }
+  
+  .btn-default-bg {
+    color: #515769;
+    background: #f3f4f5;
+    border-color: transparent;
+    border-width: 0;
+  }
+  
+  .btn-default-bg:hover, .btn-default-bg:focus, .btn-default-bg.focus {
+    color: #fff;
+    background: #17bed2;
+    border-color: transparent;
+  }
+  
+  .btn-theme-sm {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px 40px;
+  }
+  
+  .btn-theme-md {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 30px;
+  }
+
+  .about {
+    font-size: 18px;
+  }
+  hr {
+    border: none; 
+    background-color: #080808; 
+    color: #080808; 
+    height: 2px;
+    width: 120px; 
+   }
+  .about p{
+    font-size: 20px;
+  }
+
+  /* Start state */
+  .animated-modal {
+      max-width: 550px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: linear-gradient(45deg, #543093 32%, #d960ae 100%);
+
+      transform: translateY(-80px);
+      transition: all .5s; /* Should match `data-animation-duration` parameter */
+  }
+
+  .animated-modal * {
+      color: #fff;
+  }
+
+  .animated-modal h2,
+  .animated-modal p {
+      transform: translateY(-40px);
+      opacity: 0;
+
+      transition-property: transform, opacity;
+      transition-duration: .3s;
+  }
+
+  /* Final state */
+  .fancybox-slide--current .animated-modal,
+  .fancybox-slide--current .animated-modal h2,
+  .fancybox-slide--current .animated-modal p {
+      transform: translateY(0);
+      opacity: 1;
+
+      transition-duration: .3s;
+  }
+
+  /* Reveal content with different delays */
+  .fancybox-slide--current .animated-modal h2 {
+      transition-delay: .1s;
+  }
+
+  .fancybox-slide--current .animated-modal p {
+      transition-delay: .4s;
+  }
+
+  .fancybox-slide--current .animated-modal p:first-of-type {
+      transition-delay: .2s;
+  }
+
+  .footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #1C2325;
+    color: white;
+    text-align: center;
+ }
+
+ .order{
+   color: #1C2325;
+   text-align: center;
+ }

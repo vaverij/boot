@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #323c41;
+}
+
+.blog-card {
+  width: 350px;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.blog-card.pr {
+  background: url(http://wwcdn.weddingwire.com/vendor/980001_985000/983980/thumbnails/400x400_SQ_1508894430844-rustic-california-ranch-wedding.jpg) no-repeat;
+}
+.blog-card.pr2 {
+  background: url(http://greatinspire.com/wp-content/uploads/2012/10/portrait-photography-by-Egor.jpg) no-repeat;
+}
+.blog-card.pr3 {
+  background: url(http://media.giphy.com/media/fC6BAcnLFF2o/giphy-downsized-large.gif) no-repeat;
+}
+.blog-card .color-overlay {
+  /* Rectangle 11: */
+  background: rgba(84, 104, 110, 0.4);
+  width: 350px;
+  height: 500px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.blog-card .gradient-overlay {
+  /* bg-gradient: */
+  background-image: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  background-image: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  background-image: -o-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  width: 350px;
+  height: 500px;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  z-index: 15;
+}
+.blog-card:hover .card-info {
+  opacity: 1;
+  bottom: 120px;
+}
+.blog-card:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+
+.title-content {
+  text-align: center;
+  margin: 70px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.intro {
+  width: 170px;
+  margin: 0 auto;
+  color: #DCE3E7;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.card-info {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: #DCE3E7;
+  font-style: 16px;
+  line-height: 24px;
+  z-index: 20;
+  opacity: 0;
+  transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}

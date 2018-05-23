@@ -1,0 +1,273 @@
+//colors
+$main_color: #1c2325
+$gray: #eee
+$blue_light: rgba(81, 87, 105, 0.4)
+$white: #fff
+$blue_dark: #515769
+$blue_light: #17bed2
+$white_dark: #f3f4f5
+$black_gray: #080808
+$violet: #543093
+$pink: #d960ae
+
+//fonts
+$font_hind: Hind
+$font_serif: sans-serif
+
+//urls
+$url: url(../img/1920x1080/05.jpg)
+
+#body 
+	font-family: $font_hind, $font_serif
+	background-color: $main_color
+	color: $gray
+
+.header 
+	text-align: center
+	margin: 0
+	z-index: 2
+
+.promo-block 
+	position: relative
+	z-index: 1
+	text-align: center
+	background: $url no-repeat
+	background-size: cover
+	background-position: center center
+	padding: 50% 0 200px
+	&:before 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		background: $blue_light
+		content: " "
+
+	.promo-block-title 
+		font-size: 70px
+		color: $white
+
+	.promo-block-text 
+		font-size: 25px
+		color: $white
+
+
+@media(max-width: 720px) 
+	.promo-block 
+		padding: 100px 0 200px
+
+
+@media(max-width: 480px) 
+	.promo-block .promo-block-title 
+		font-size: 50px
+
+
+.btn-theme 
+	position: relative
+	display: inline-block
+	line-height: 1.4
+	text-align: center
+	background-image: none
+	border-style: solid
+	white-space: nowrap
+	vertical-align: middle
+	-ms-touch-action: manipulation
+	touch-action: manipulation
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	&:focus 
+		outline: none
+		text-decoration: none
+
+	&:active 
+		background-image: none
+		outline: 0
+		&:focus 
+			outline: none
+
+		&.focus 
+			outline: none
+
+
+	&.active 
+		background-image: none
+		outline: 0
+		&:focus 
+			outline: none
+
+		&.focus 
+			outline: none
+
+	&.focus 
+		outline: none
+		text-decoration: none
+
+	&:hover 
+		transition-duration: 300ms
+		transition-property: all
+		transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1)
+		text-decoration: none
+
+	&.disabled 
+		cursor: not-allowed
+		box-shadow: none
+		opacity: .65
+		pointer-events: none
+
+
+.btn-theme[disabled] 
+	cursor: not-allowed
+	box-shadow: none
+	opacity: .65
+	pointer-events: none
+
+.btn-white-bg 
+	color: $blue_dark
+	background: $white
+	border-color: transparent
+	border-width: 0
+	&:hover 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+	&:focus 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+	&.focus 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+.btn-white-brd 
+	color: $white
+	background: transparent
+	border-color: $white
+	border-width: 2px
+	&:hover 
+		color: $blue_dark
+		background: $white
+		border-color: $white
+
+	&:focus 
+		color: $blue_dark
+		background: $white
+		border-color: $white
+
+	&.focus 
+		color: $blue_dark
+		background: $white
+		border-color: $white
+
+.btn-default-bg 
+	color: $blue_dark
+	background: $white_dark
+	border-color: transparent
+	border-width: 0
+	&:hover 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+	&:focus 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+	&.focus 
+		color: $white
+		background: $blue_light
+		border-color: transparent
+
+
+.btn-theme-sm 
+	font-size: 13px
+	font-weight: 600
+	padding: 15px 40px
+
+.btn-theme-md 
+	font-size: 15px
+	font-weight: 600
+	padding: 20px 30px
+
+.about 
+	font-size: 18px
+	p 
+		font-size: 20px
+
+
+hr 
+	border: none
+	background-color: $black_gray
+	color: $black_gray
+	height: 2px
+	width: 120px
+
+.animated-modal 
+	max-width: 550px
+	border-radius: 4px
+	overflow: hidden
+	background: linear-gradient(45deg, $violet 32%, $pink 100%)
+	transform: translateY(-80px)
+
+	transition: all .5s
+	* 
+		color: $white
+
+	h2 
+		transform: translateY(-40px)
+		opacity: 0
+		transition-property: transform, opacity
+		transition-duration: .3s
+
+	p 
+		transform: translateY(-40px)
+		opacity: 0
+		transition-property: transform, opacity
+		transition-duration: .3s
+
+
+.footer 
+	position: relative
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 100px
+	background-color: $main_color
+	color: $white
+	text-align: center
+
+.order 
+	color: $main_color
+	text-align: center
+
+fieldset[disabled] .btn-theme 
+	cursor: not-allowed
+	box-shadow: none
+	opacity: .65
+	pointer-events: none
+
+.fancybox-slide--current .animated-modal 
+	transform: translateY(0)
+	opacity: 1
+	transition-duration: .3s
+	h2 
+		transform: translateY(0)
+		opacity: 1
+		transition-duration: .3s
+		transition-delay: .1s
+
+	p 
+		transform: translateY(0)
+		opacity: 1
+		transition-duration: .3s
+		transition-delay: .4s
+		&:first-of-type 
+			transition-delay: .2s
